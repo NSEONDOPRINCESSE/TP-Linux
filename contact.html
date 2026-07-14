@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Digital — Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="logo" href="index.html">Nova<span>Digital</span></a>
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="contact-titre">
+      <h2 id="contact-titre">Contactez-nous</h2>
+
+      <form class="contact-form" action="#" method="post">
+
+        <div class="field">
+          <label for="nom">Nom complet</label>
+          <input type="text" id="nom" name="nom" required minlength="2" placeholder="Votre nom">
+        </div>
+
+        <div class="field">
+          <label for="email">Adresse email</label>
+          <input type="email" id="email" name="email" required placeholder="vous@exemple.com">
+        </div>
+
+        <div class="field">
+          <label for="telephone">Téléphone</label>
+          <input type="tel" id="telephone" name="telephone" pattern="[0-9 +]{8,15}" placeholder="01 23 45 67 89">
+        </div>
+
+        <div class="field">
+          <label for="sujet">Sujet</label>
+          <select id="sujet" name="sujet" required>
+            <option value="">-- Choisissez un sujet --</option>
+            <option value="devis">Demande de devis</option>
+            <option value="support">Support technique</option>
+            <option value="partenariat">Partenariat</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+
+        <fieldset>
+          <legend>Comment préférez-vous être recontacté ?</legend>
+          <div class="radio-row">
+            <input type="radio" id="contact-email" name="contact_pref" value="email" checked>
+            <label for="contact-email">Par email</label>
+
+            <input type="radio" id="contact-tel" name="contact_pref" value="telephone">
+            <label for="contact-tel">Par téléphone</label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="message">Votre message</label>
+          <textarea id="message" name="message" rows="5" required minlength="10" placeholder="Décrivez votre projet..."></textarea>
+        </div>
+
+        <div class="checkbox-row">
+          <input type="checkbox" id="rgpd" name="rgpd" required>
+          <label for="rgpd">J'accepte que mes données soient utilisées pour être recontacté(e)</label>
+        </div>
+
+        <button type="submit">Envoyer le message</button>
+      </form>
+
+      <address>
+        123 rue du Numérique, 75000 Paris<br>
+        Email : contact@novadigital.fr<br>
+        Téléphone : 01 23 45 67 89
+      </address>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Nova Digital — TP réalisé par nseondoprincesse3-afk</p>
+  </footer>
+
+</body>
+</html>
